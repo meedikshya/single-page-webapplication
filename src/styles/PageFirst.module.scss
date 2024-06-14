@@ -1,0 +1,123 @@
+@import "./variables.scss";
+
+// Body and container styles
+.body {
+  background-color: #f9f9ff;
+  margin-top: -80px;
+}
+
+.card_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-bottom: 100px;
+}
+
+// Card styles
+.card {
+  width: clamp(350px, 25vw, 400px);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: clamp(10px, 2vw, 30px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  min-height: clamp(350px, 25vh, 400px);
+}
+
+// Card content styles
+.card_content {
+  padding: 20px;
+
+  h3 {
+    font-size: clamp(15px, 2vw, 22px);
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: clamp(14px, 2vw, 18px);
+    color: gray;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: clamp(12px, 2vw, 16px);
+    margin-top: 1.5rem;
+    color: rgb(108, 145, 218);
+  }
+}
+
+// Arrow icon styles
+.arrow_icon {
+  position: relative;
+  margin-left: 10px;
+  font-size: clamp(10px, 2vw, 16px);
+  color: rgb(108, 145, 218);
+}
+
+// Text container styles
+.text_container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5%;
+  font-family: $ubuntu-font;
+
+  .heading {
+    font-size: 40px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    padding-top: 80px;
+  }
+
+  .paragraph {
+    padding: 10px 20px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    color: gray;
+  }
+}
+
+// Media queries for smaller screens
+@media (max-width: 768px) {
+  .card_container {
+    padding-bottom: 50px;
+  }
+
+  .card {
+    width: clamp(260px, 50vw, 300px);
+    margin: 10px;
+  }
+
+  .card img {
+    min-height: 200px;
+  }
+
+  .card_content {
+    padding: 15px;
+  }
+
+  .card_content h3 {
+    font-size: 18px;
+  }
+
+  .card_content p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}

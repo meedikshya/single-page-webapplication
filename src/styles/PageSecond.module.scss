@@ -1,0 +1,246 @@
+@import "./variables.scss";
+
+// Body styles
+.body {
+  background-color: white;
+}
+
+// Container styles
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Box one and box two layout
+.box_one,
+.box_two {
+  min-height: 400px;
+  width: 100%;
+}
+
+.box_one {
+  flex: 0 0 40%;
+  padding: 30px;
+
+  // Responsive adjustments for large screens
+  @include breakpoint(lg) {
+    padding-left: 90px;
+  }
+
+  // Responsive adjustments for small screens
+  @include breakpoint(sm) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.box_two {
+  flex: 0 0 60%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: clamp(20px, 10vh, 60px);
+  justify-content: center;
+
+  // Media query adjustments for extra small screens
+  @media (max-width: 576px) {
+    padding-top: 5px;
+  }
+
+  // Card styles within box two
+  .card {
+    position: relative;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 250px;
+    padding: 15px;
+  }
+
+  // Image styles within card
+  .card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  // Image container styles
+  .image {
+    border-radius: 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  // Hover effect on card image
+  .card:hover img {
+    transform: scale(1.1);
+  }
+
+  // Margin adjustments for different cards
+  .card:nth-child(2) {
+    margin-top: 120px;
+  }
+
+  .card:nth-child(3) {
+    margin-top: -110px;
+  }
+
+  .card:nth-child(4) {
+    margin-top: -10px;
+  }
+
+  // Text styles within card
+  .cardText {
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    font-size: clamp(16px, 1vh, 12px);
+    font-weight: 300;
+    font-family: $ubuntu-font;
+
+    // Responsive font size adjustments
+    @include breakpoint(xs) {
+      font-size: 12px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 14px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 15px;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 17px;
+    }
+  }
+}
+
+// Media query adjustments for medium screens
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box_one,
+  .box_two {
+    flex: 0 0 100%;
+  }
+
+  .box_two {
+    justify-content: center;
+    align-items: center;
+    margin-top: -5rem;
+
+    // Card adjustments for smaller screens
+    .card {
+      flex: 0 0 80%;
+      margin-bottom: 20px;
+    }
+
+    // Image adjustments within cards
+    .card img {
+      max-width: 100%;
+      max-height: 300px;
+      display: block;
+    }
+
+    // Text adjustments within cards
+    .cardText {
+      padding: 10px;
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+}
+
+// Text container styles
+.text_container {
+  margin-top: 5%;
+  font-family: $ubuntu-font;
+  text-align: left;
+  padding-left: 20px;
+
+  // Heading styles
+  .heading {
+    font-size: 30px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    padding: 0;
+    max-width: 500px;
+
+    // Responsive font size adjustments
+    @include breakpoint(xs) {
+      font-size: 25px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 20px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 30px;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 40px;
+    }
+  }
+
+  // Paragraph styles
+  .paragraph {
+    padding: 0;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    color: gray;
+    text-align: justify;
+    line-height: 2;
+
+    // Responsive font size adjustments
+    @include breakpoint(xs) {
+      font-size: 12px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 14px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 16px;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 18px;
+    }
+  }
+
+  // Button styles
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: clamp(12px, 2vw, 16px);
+    color: rgb(108, 145, 218);
+    margin-top: 1rem;
+  }
+
+  // Button text styles
+  .btn_text {
+    margin-right: 10px;
+  }
+
+  // Arrow icon styles
+  .arrow_icon {
+    font-size: clamp(10px, 2vw, 16px);
+    color: rgb(108, 145, 218);
+  }
+}
+
+// Scroll div styles
+.scroll_div {
+  background-color: #f9f9ff;
+  min-height: 100px;
+  max-height: 300px;
+}

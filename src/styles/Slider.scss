@@ -1,0 +1,59 @@
+/* Product carousel container */
+.product-carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 26px;
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Product container */
+.product-container {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+/* Previous and Next buttons */
+.pre-btn,
+.next-btn {
+  border: none;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Previous button */
+.pre-btn {
+  left: 0;
+  margin-left: -22px;
+}
+
+/* Next button */
+.next-btn {
+  right: 0;
+  margin-right: -22px;
+}
+
+/* Icon inside buttons */
+.next-btn p,
+.pre-btn p {
+  font-size: clamp(20px, 3vw, 40px);
+  border-radius: 10px;
+  color: gray;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}

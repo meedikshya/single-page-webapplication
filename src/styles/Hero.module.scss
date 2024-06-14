@@ -1,0 +1,159 @@
+@import "./variables.scss";
+
+// Styles for the main container holding the hero image and content
+.image_container {
+  position: relative;
+  width: 100%;
+  min-height: 80vh; // Minimum height set to 80% of the viewport height
+}
+
+// Hero image styles
+.image {
+  height: 100vh; // Covers the entire viewport height
+  background-image: url("../Images/smallPicture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+// Container for text content
+.text_container {
+  position: absolute;
+  top: clamp(48%, 20vh, 70%); // Centered vertically with a clamp function
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+
+  // Heading styles
+  .heading {
+    width: 200%;
+    z-index: 1;
+
+    @include breakpoint(md) {
+      font-size: min(80px, 2vw + 1.3rem, 60px); // Responsive font size
+    }
+  }
+
+  // Paragraph styles
+  .paragraph {
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 800px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    z-index: -1;
+
+    @include breakpoint(xs) {
+      font-size: clamp(16px, 1.5vw + 0.2rem, 18px); // Responsive font size
+      width: 180%;
+    }
+
+    @include breakpoint(sm) {
+      font-size: clamp(18px, 2vw + 0.5rem, 20px); // Responsive font size
+      width: 160%;
+    }
+  }
+}
+
+// Overlay to darken the hero image
+.image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 41, 83, 0.8) 0%,
+    rgba(0, 45, 91, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+// Search bar styles
+.search_bar {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  input {
+    width: clamp(250px, 30vw, 500px); // Responsive width with clamp function
+    height: 3rem;
+    padding: 10px 10px 10px 35px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    @include breakpoint(xs) {
+      // Adjustments for extra small screens
+    }
+  }
+
+  // Search icon styles
+  .search_icon {
+    position: absolute;
+    top: 48%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+  }
+
+  // Close icon styles
+  .close_icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: black;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 3px;
+  }
+}
+
+// Button styles
+.button {
+  position: relative;
+  margin-top: 20px;
+  padding: 10px 10px;
+  border: 2px solid #ddca60;
+  background: transparent;
+  color: #fff;
+  font-size: clamp(
+    14px,
+    1.5vw,
+    18px
+  ); // Responsive font size with clamp function
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+
+  &:hover {
+    background: #fff;
+    color: #000;
+    border: 2px solid #ffffff;
+  }
+
+  // Responsive adjustments
+  @include breakpoint(md) {
+    padding: 17px 27px;
+  }
+
+  @include breakpoint(sm) {
+    padding: 8px 17px;
+  }
+
+  @include breakpoint(xs) {
+    padding: 8px 12px;
+  }
+}

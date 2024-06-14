@@ -1,0 +1,366 @@
+/* Import variables for consistency */
+@import "./variables.scss";
+
+/* Styles for footer container */
+.footer_container {
+  position: relative;
+
+  /* Media query for screens up to 768px */
+  @media (max-width: 768px) {
+    /* Add specific styles for smaller screens */
+  }
+}
+
+/* Styles for image container */
+.image_container {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+
+  /* Media query for screens up to 768px */
+  @media (max-width: 768px) {
+    height: clamp(60vh, 30vh, 60vh); /* Responsive height adjustment */
+  }
+}
+
+/* Styles for background image */
+.image {
+  width: 100%;
+  height: 100%;
+  background-image: url("../Images/footer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Styles for overlay on top of image */
+.image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 50, 86, 0.8); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+/* Styles for content containers within footer */
+.containers {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  z-index: 2;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Media query for screens up to 768px */
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+  }
+}
+
+/* Styles for first content container */
+.containerI {
+  width: 40%;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  margin: clamp(10px, 5vw, 110px); /* Responsive margin adjustment */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  /* Media query for screens up to 768px */
+  @media (max-width: 768px) {
+    width: 80%; /* Adjust width for smaller screens */
+    margin: 0; /* Remove margin for better alignment */
+    text-align: center; /* Center text */
+    align-items: center; /* Center items horizontally */
+  }
+
+  /* Styles for logo and heading */
+  .logo_heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    /* Styles for logo image */
+    img {
+      margin-right: 15px;
+      width: clamp(30px, 30vw, 60px); /* Responsive image width */
+      height: auto;
+
+      /* Media query for screens up to 768px */
+      @media (max-width: 768px) {
+        width: clamp(20px, 20vw, 30px); /* Adjust image width */
+      }
+    }
+
+    /* Styles for heading */
+    h2 {
+      font-size: clamp(20px, 10vh, 30px); /* Responsive font size */
+
+      /* Media query for screens up to 768px */
+      @media (max-width: 768px) {
+        font-size: clamp(15px, 10vh, 20px); /* Adjust font size */
+      }
+    }
+  }
+
+  /* Styles for paragraph */
+  p {
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-align: justify;
+    max-width: 20rem;
+    min-width: 15rem;
+    font-size: clamp(10px, 5vh, 15px); /* Responsive font size */
+
+    /* Media query for screens up to 768px */
+    @media (max-width: 768px) {
+      text-align: center; /* Center text */
+      font-size: clamp(10px, 5vh, 14px); /* Adjust font size */
+    }
+  }
+
+  /* Styles for social media icons */
+  .social_media {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+
+    /* Styles for each icon container */
+    .icon_container {
+      padding: 8px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* Styles for icons */
+      .icon {
+        font-size: clamp(14px, 5vw, 22px); /* Responsive icon size */
+        color: #3a3d43;
+        transition: 0.3s;
+
+        /* Hover effect */
+        &:hover {
+          color: rgb(101, 169, 230);
+        }
+      }
+    }
+  }
+}
+
+/* Styles for second content container */
+.containerII {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  color: #fff;
+
+  /* Media query for screens up to 768px */
+  @media (max-width: 768px) {
+    width: 100%; /* Full width on smaller screens */
+    display: flex; /* Ensure items are displayed as flex */
+    // flex-direction: column;
+    align-items: center; /* Center items horizontally */
+  }
+
+  /* Styles for footer list */
+  .footer_list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    /* Media query for screens up to 768px */
+    @media (max-width: 768px) {
+      // flex-direction: column;
+      // align-items: center;
+    }
+  }
+
+  /* Styles for each column */
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+
+    /* Styles for heading */
+    h3 {
+      margin-bottom: 20px;
+      font-size: clamp(12px, 5vh, 17px); /* Responsive font size */
+      font-weight: 600;
+      line-height: 20px;
+
+      /* Media query for screens up to 768px */
+      @media (max-width: 768px) {
+        font-size: clamp(10px, 5vh, 14px); /* Adjust font size */
+        margin-bottom: 10px; /* Reduce margin for smaller screens */
+      }
+    }
+
+    /* Styles for list */
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: clamp(10px, 3vh, 14px); /* Responsive font size */
+      font-weight: 400;
+
+      /* Media query for screens up to 768px */
+      @media (max-width: 768px) {
+        font-size: clamp(10px, 3vh, 12px); /* Adjust font size */
+      }
+
+      /* Styles for list items */
+      li {
+        margin-bottom: 10px;
+
+        /* Styles for links */
+        a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.3s;
+
+          /* Hover effect */
+          &:hover {
+            color: aqua;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Styles for small div at the bottom */
+.small_div {
+  color: #7c7d82;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px;
+  background-color: #f9f9ff;
+
+  /* Media query for screens up to 768px */
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  /* Styles for terms paragraph */
+  .terms {
+    margin: 0;
+    padding-left: 70px;
+
+    /* Media query for screens up to 768px */
+    @media (max-width: 768px) {
+      text-align: center; /* Center text */
+      padding-left: 0px; /* Reset left padding */
+    }
+
+    /* Styles for links within terms */
+    a {
+      color: #7c7d82;
+      text-decoration: none;
+      transition: color 0.3s;
+      line-height: 21px;
+      font-weight: 400;
+
+      /* Media query for screens up to 768px */
+      @media (max-width: 768px) {
+        display: flex; /* Display links as flex */
+        text-align: center; /* Center text */
+        font-size: 14px; /* Adjust font size */
+      }
+
+      /* Hover effect */
+      &:hover {
+        color: rgb(121, 174, 209);
+      }
+    }
+  }
+
+  /* Styles for logo and up arrow container */
+  .logo_arrow {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding-right: 70px;
+
+    /* Media query for screens up to 768px */
+    @media (max-width: 768px) {
+      padding-right: 0rem; /* Reset right padding */
+      display: flex; /* Display items as flex */
+      margin: 10px 0; /* Adjust margin */
+      align-items: center; /* Center items vertically */
+    }
+
+    /* Styles for logo image */
+    img {
+      width: 105px; /* Set logo image width
+      height: 25px; /* Set logo image height */
+      margin: 0;
+
+      /* Media query for screens up to 768px */
+      @media (max-width: 768px) {
+        text-align: center; /* Center text */
+        width: 85px; /* Adjust logo image width */
+      }
+    }
+
+    /* Styles for up arrow icon */
+    .up_arrow {
+      font-size: 20px; /* Set arrow icon size */
+      color: #7c7d82;
+      cursor: pointer;
+      transition: color 0.3s;
+      margin-left: 40px; /* Add margin to the left of arrow */
+
+      /* Media query for screens up to 768px */
+      @media (max-width: 768px) {
+        margin-left: 10px; /* Adjust margin */
+      }
+
+      /* Hover effect */
+      &:hover {
+        color: rgb(121, 174, 209);
+      }
+    }
+  }
+}
+
+/* Additional Responsive Adjustments for screens up to 480px */
+@media (max-width: 480px) {
+  /* Styles for first content container */
+  .containerI {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  /* Styles for second content container */
+  .containerII {
+    padding: 5px; /* Reduce padding */
+  }
+
+  /* Styles for column headings */
+  .column h3 {
+    font-size: clamp(10px, 5vh, 14px); /* Responsive font size */
+  }
+
+  /* Styles for column lists */
+  .column ul {
+    font-size: clamp(8px, 3vh, 12px); /* Responsive font size */
+  }
+}

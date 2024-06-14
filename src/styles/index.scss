@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ubuntu-font;
+  color: $text;
+  background-color: white;
+  // height: 200vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  // reset to default
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background: none;
+  letter-spacing: inherit;
+  color: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
