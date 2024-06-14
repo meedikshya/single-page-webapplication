@@ -27,9 +27,7 @@ function App() {
 
   useEffect(() => {
     const fetchNewsArticles = () => {
-      fetch(
-        "https://raw.githubusercontent.com/younginnovations/internship-challenges/master/front-end/news_list.json"
-      )
+      fetch(process.env.REACT_APP_NEWS_API_URL)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
