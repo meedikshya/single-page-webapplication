@@ -56,7 +56,7 @@ export const Footer = () => {
                 <h3>Links</h3>
                 <ul>
                   <li>
-                    <a href="/">Campaigns</a>
+                    <a href="/*">Campaigns</a>
                   </li>
                   <li>
                     <a href="/">Resources</a>
