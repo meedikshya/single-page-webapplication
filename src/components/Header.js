@@ -12,7 +12,6 @@ const Header = ({ onSearchIconClick }) => {
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [pastHero, setPastHero] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
 
   const handleScrollToAboutUs = (e) => {
     e.preventDefault();
@@ -20,20 +19,6 @@ const Header = ({ onSearchIconClick }) => {
     if (aboutUsSection) {
       aboutUsSection.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const linkStyle = {
-    color: isHovered ? "aqua" : "white",
-    textDecoration: "none",
-    transition: "color 0.3s ease",
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
   };
 
   // Toggles the menu state
@@ -90,20 +75,17 @@ const Header = ({ onSearchIconClick }) => {
             menuOpen ? styles[`cf_nav--open`] : ""
           } ${isSmallScreen ? styles[`cf_nav--vertical`] : ""}`}
         >
-          <a className={styles.cf_nav__item} href={"/"}>
+          <a className={styles.cf_nav__item} href={"/intern-task"}>
             Home
           </a>
           <a
-            style={linkStyle}
-            href="#AboutUs"
             onClick={handleScrollToAboutUs}
+            href="/"
             className={styles.navbar_link}
-            onMouseEnter={handleMouseEnter} // Event handler for hover
-            onMouseLeave={handleMouseLeave} // Event handler for hover
           >
             About Us
           </a>
-          <a className={styles.cf_nav__item} href={"/"}>
+          <a className={styles.cf_nav__item} href={"/intern-task"}>
             Case Studies
           </a>
           <div

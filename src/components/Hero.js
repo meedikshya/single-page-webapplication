@@ -21,10 +21,10 @@ const Hero = ({ showSearchBar, onCloseSearch }) => {
         className={styles.image}
         style={{
           backgroundImage: `url(${image})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
+          // backgroundRepeat: "no-repeat",
+          // backgroundAttachment: "fixed",
           // height: "100vh",
         }}
       ></div>
