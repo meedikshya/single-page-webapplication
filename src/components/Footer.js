@@ -56,16 +56,16 @@ export const Footer = () => {
                 <h3>Links</h3>
                 <ul>
                   <li>
-                    <a href="/*">Campaigns</a>
+                    <a href="/intern-task">Campaigns</a>
                   </li>
                   <li>
-                    <a href="/">Resources</a>
+                    <a href="/intern-task">Resources</a>
                   </li>
                   <li>
-                    <a href="/">News</a>
+                    <a href="/intern-task">News</a>
                   </li>
                   <li>
-                    <a href="/">About Us</a>
+                    <a href="/intern-task">About Us</a>
                   </li>
                 </ul>
               </div>
@@ -73,13 +73,13 @@ export const Footer = () => {
                 <h3>Resources</h3>
                 <ul>
                   <li>
-                    <a href="/">Transparency Toolkit</a>
+                    <a href="/intern-task">Transparency Toolkit</a>
                   </li>
                   <li>
-                    <a href="/">Evidence</a>
+                    <a href="/intern-task">Evidence</a>
                   </li>
                   <li>
-                    <a href="/">Best Practices</a>
+                    <a href="/intern-task">Best Practices</a>
                   </li>
                 </ul>
               </div>
@@ -87,10 +87,10 @@ export const Footer = () => {
                 <h3>Work with us</h3>
                 <ul>
                   <li>
-                    <a href="/">Contact Us</a>
+                    <a href="/intern-task">Contact Us</a>
                   </li>
                   <li>
-                    <a href="/">Join Us</a>
+                    <a href="/intern-task">Join Us</a>
                   </li>
                 </ul>
               </div>
@@ -100,7 +100,7 @@ export const Footer = () => {
       </div>
       <div className={styles.small_div}>
         <div className={styles.terms}>
-          <a href="/">Terms and Conditions</a>
+          <a href="/intern-task">Terms and Conditions</a>
         </div>
         <div className={styles.logo_arrow} onClick={scrollToHeroSection}>
           <img src={logo} alt="Logo" />
