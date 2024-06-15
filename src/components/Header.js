@@ -24,8 +24,8 @@ const Header = ({ onSearchIconClick }) => {
 
   const linkStyle = {
     color: isHovered ? "aqua" : "white",
-    textDecoration: "none", // Optional: Remove underline
-    transition: "color 0.3s ease", // Optional: Add transition
+    textDecoration: "none",
+    transition: "color 0.3s ease",
   };
 
   const handleMouseEnter = () => {

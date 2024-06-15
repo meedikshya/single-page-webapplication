@@ -4,11 +4,6 @@
 /* Styles for footer container */
 .footer_container {
   position: relative;
-
-  /* Media query for screens up to 768px */
-  @media (max-width: 768px) {
-    /* Add specific styles for smaller screens */
-  }
 }
 
 /* Styles for image container */
@@ -29,11 +24,11 @@
 .image {
   width: 100%;
   height: 100%;
-  background-image: url("../Images/footer.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-image: url("../Images/footer.jpg");
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
 }
 
 /* Styles for overlay on top of image */
@@ -62,8 +57,8 @@
 
   /* Media query for screens up to 768px */
   @media (max-width: 768px) {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -80,10 +75,10 @@
 
   /* Media query for screens up to 768px */
   @media (max-width: 768px) {
-    width: 80%; /* Adjust width for smaller screens */
-    margin: 0; /* Remove margin for better alignment */
-    text-align: center; /* Center text */
-    align-items: center; /* Center items horizontally */
+    width: 80%;
+    margin: 0;
+    text-align: center;
+    align-items: center;
   }
 
   /* Styles for logo and heading */
@@ -95,22 +90,22 @@
     /* Styles for logo image */
     img {
       margin-right: 15px;
-      width: clamp(30px, 30vw, 60px); /* Responsive image width */
+      width: clamp(30px, 30vw, 60px);
       height: auto;
 
       /* Media query for screens up to 768px */
       @media (max-width: 768px) {
-        width: clamp(20px, 20vw, 30px); /* Adjust image width */
+        width: clamp(20px, 20vw, 30px);
       }
     }
 
     /* Styles for heading */
     h2 {
-      font-size: clamp(20px, 10vh, 30px); /* Responsive font size */
+      font-size: clamp(20px, 10vh, 30px);
 
       /* Media query for screens up to 768px */
       @media (max-width: 768px) {
-        font-size: clamp(15px, 10vh, 20px); /* Adjust font size */
+        font-size: clamp(15px, 10vh, 20px);
       }
     }
   }
@@ -122,12 +117,12 @@
     text-align: justify;
     max-width: 20rem;
     min-width: 15rem;
-    font-size: clamp(10px, 5vh, 15px); /* Responsive font size */
+    font-size: clamp(10px, 5vh, 15px);
 
     /* Media query for screens up to 768px */
     @media (max-width: 768px) {
-      text-align: center; /* Center text */
-      font-size: clamp(10px, 5vh, 14px); /* Adjust font size */
+      text-align: center;
+      font-size: clamp(10px, 5vh, 14px);
     }
   }
 
@@ -171,10 +166,9 @@
 
   /* Media query for screens up to 768px */
   @media (max-width: 768px) {
-    width: 100%; /* Full width on smaller screens */
-    display: flex; /* Ensure items are displayed as flex */
-    // flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
 
   /* Styles for footer list */
@@ -185,8 +179,6 @@
 
     /* Media query for screens up to 768px */
     @media (max-width: 768px) {
-      // flex-direction: column;
-      // align-items: center;
     }
   }
 
@@ -202,14 +194,14 @@
     /* Styles for heading */
     h3 {
       margin-bottom: 20px;
-      font-size: clamp(12px, 5vh, 17px); /* Responsive font size */
+      font-size: clamp(12px, 5vh, 17px);
       font-weight: 600;
       line-height: 20px;
 
       /* Media query for screens up to 768px */
       @media (max-width: 768px) {
-        font-size: clamp(10px, 5vh, 14px); /* Adjust font size */
-        margin-bottom: 10px; /* Reduce margin for smaller screens */
+        font-size: clamp(10px, 5vh, 14px);
+        margin-bottom: 10px;
       }
     }
 
@@ -217,12 +209,12 @@
     ul {
       list-style: none;
       padding: 0;
-      font-size: clamp(10px, 3vh, 14px); /* Responsive font size */
+      font-size: clamp(10px, 3vh, 14px);
       font-weight: 400;
 
       /* Media query for screens up to 768px */
       @media (max-width: 768px) {
-        font-size: clamp(10px, 3vh, 12px); /* Adjust font size */
+        font-size: clamp(10px, 3vh, 12px);
       }
 
       /* Styles for list items */
@@ -256,8 +248,8 @@
 
   /* Media query for screens up to 768px */
   @media (max-width: 768px) {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
   }
 
   /* Styles for terms paragraph */
@@ -267,8 +259,8 @@
 
     /* Media query for screens up to 768px */
     @media (max-width: 768px) {
-      text-align: center; /* Center text */
-      padding-left: 0px; /* Reset left padding */
+      text-align: center;
+      padding-left: 0px;
     }
 
     /* Styles for links within terms */
@@ -281,9 +273,9 @@
 
       /* Media query for screens up to 768px */
       @media (max-width: 768px) {
-        display: flex; /* Display links as flex */
-        text-align: center; /* Center text */
-        font-size: 14px; /* Adjust font size */
+        display: flex;
+        text-align: center;
+        font-size: 14px;
       }
 
       /* Hover effect */
@@ -302,36 +294,35 @@
 
     /* Media query for screens up to 768px */
     @media (max-width: 768px) {
-      padding-right: 0rem; /* Reset right padding */
-      display: flex; /* Display items as flex */
-      margin: 10px 0; /* Adjust margin */
-      align-items: center; /* Center items vertically */
+      padding-right: 0rem;
+      display: flex;
+      margin: 10px 0;
+      align-items: center;
     }
 
     /* Styles for logo image */
     img {
-      width: 105px; /* Set logo image width
-      height: 25px; /* Set logo image height */
+      width: 105px;
       margin: 0;
 
       /* Media query for screens up to 768px */
       @media (max-width: 768px) {
-        text-align: center; /* Center text */
-        width: 85px; /* Adjust logo image width */
+        text-align: center;
+        width: 85px;
       }
     }
 
     /* Styles for up arrow icon */
     .up_arrow {
-      font-size: 20px; /* Set arrow icon size */
+      font-size: 20px;
       color: #7c7d82;
       cursor: pointer;
       transition: color 0.3s;
-      margin-left: 40px; /* Add margin to the left of arrow */
+      margin-left: 40px;
 
       /* Media query for screens up to 768px */
       @media (max-width: 768px) {
-        margin-left: 10px; /* Adjust margin */
+        margin-left: 10px;
       }
 
       /* Hover effect */
@@ -346,21 +337,21 @@
 @media (max-width: 480px) {
   /* Styles for first content container */
   .containerI {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 90%;
   }
 
   /* Styles for second content container */
   .containerII {
-    padding: 5px; /* Reduce padding */
+    padding: 5px;
   }
 
   /* Styles for column headings */
   .column h3 {
-    font-size: clamp(10px, 5vh, 14px); /* Responsive font size */
+    font-size: clamp(10px, 5vh, 14px);
   }
 
   /* Styles for column lists */
   .column ul {
-    font-size: clamp(8px, 3vh, 12px); /* Responsive font size */
+    font-size: clamp(8px, 3vh, 12px);
   }
 }

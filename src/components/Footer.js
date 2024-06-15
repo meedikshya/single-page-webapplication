@@ -4,6 +4,8 @@ import { FaTwitter, FaLinkedin, FaYoutube, FaArrowUp } from "react-icons/fa";
 import images from "../Images/Logomark.png";
 import logo from "../Images/cc-logo.png";
 
+import imageUrl from "../Images/footer2.jpg";
+
 export const Footer = () => {
   const scrollToHeroSection = () => {
     const heroSection = document.getElementById("heroSection");
@@ -14,8 +16,16 @@ export const Footer = () => {
 
   return (
     <div className={styles.footer_container}>
-      <div className={styles.image_container}>
-        <div className={styles.image}></div>
+      <div
+        className={styles.image_container}
+        style={{
+          backgroundImage: `url(${imageUrl})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+        }}
+      >
         <div className={styles.image_overlay}></div>
         <div className={styles.containers}>
           <div className={styles.containerI}>

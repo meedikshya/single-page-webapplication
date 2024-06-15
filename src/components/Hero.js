@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { FaArrowRight } from "react-icons/fa";
 import styles from "../styles/Hero.module.scss";
+import image from "../Images/Hero123.jpg";
 
 // Hero component definition
 const Hero = ({ showSearchBar, onCloseSearch }) => {
-  // State for cover removal animation
-  const [coverRemoved, setCoverRemoved] = useState(false);
-
   // Handle button click to scroll to belowSection
   const handleButtonClick = () => {
     const belowSection = document.getElementById("belowSection");
@@ -16,25 +14,20 @@ const Hero = ({ showSearchBar, onCloseSearch }) => {
     }
   };
 
-  // Simulate cover removal after a delay on component mount
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCoverRemoved(true);
-    }, 5000); // Delay of 5 seconds
-
-    // Clean up timer on component unmount
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className={styles.image_container} id="heroSection">
-      {/* Cover div with fade-out animation */}
-      <div
-        className={`${styles.cover} ${coverRemoved ? styles.fadeOut : ""}`}
-      ></div>
-
       {/* Image and overlay */}
-      <div className={styles.image}></div>
+      <div
+        className={styles.image}
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          // height: "100vh",
+        }}
+      ></div>
       <div className={styles.image_overlay}></div>
 
       {/* Search bar */}
@@ -66,9 +59,7 @@ const Hero = ({ showSearchBar, onCloseSearch }) => {
       </div>
 
       {/* Placeholder section to scroll to */}
-      <div id="belowSection" style={{ backgroundColor: "white" }}>
-        {/* Content for the section you want to scroll to */}
-      </div>
+      <div id="belowSection" style={{ backgroundColor: "white" }}></div>
     </div>
   );
 };
