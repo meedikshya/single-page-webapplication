@@ -4,7 +4,7 @@ import { FaTwitter, FaLinkedin, FaYoutube, FaArrowUp } from "react-icons/fa";
 import images from "../Images/Logomark.png";
 import logo from "../Images/cc-logo.png";
 
-import imageUrl from "../Images/footer2.jpg";
+import imageUrl from "../Images/footer.jpg";
 
 export const Footer = () => {
   const scrollToHeroSection = () => {
@@ -31,7 +31,7 @@ export const Footer = () => {
           <div className={styles.containerI}>
             <div className={styles.logo_heading}>
               <img src={images} alt="imageLogo" />
-              <h2>Catalog</h2>
+              <h2>CoralConnect</h2>
             </div>
             <p>
               We are a collaboration of non-government organizations and
@@ -56,16 +56,16 @@ export const Footer = () => {
                 <h3>Links</h3>
                 <ul>
                   <li>
-                    <a href="/intern-task">Campaigns</a>
+                    <a href="/single-page-webapp">Campaigns</a>
                   </li>
                   <li>
-                    <a href="/intern-task">Resources</a>
+                    <a href="/single-page-webapp">Resources</a>
                   </li>
                   <li>
-                    <a href="/intern-task">News</a>
+                    <a href="/single-page-webapp">News</a>
                   </li>
                   <li>
-                    <a href="/intern-task">About Us</a>
+                    <a href="/single-page-webapp">About Us</a>
                   </li>
                 </ul>
               </div>
@@ -73,13 +73,13 @@ export const Footer = () => {
                 <h3>Resources</h3>
                 <ul>
                   <li>
-                    <a href="/intern-task">Transparency Toolkit</a>
+                    <a href="/single-page-webapp">Transparency Toolkit</a>
                   </li>
                   <li>
-                    <a href="/intern-task">Evidence</a>
+                    <a href="/single-page-webapp">Evidence</a>
                   </li>
                   <li>
-                    <a href="/intern-task">Best Practices</a>
+                    <a href="/single-page-webapp">Best Practices</a>
                   </li>
                 </ul>
               </div>
@@ -87,10 +87,10 @@ export const Footer = () => {
                 <h3>Work with us</h3>
                 <ul>
                   <li>
-                    <a href="/intern-task">Contact Us</a>
+                    <a href="/single-page-webapp">Contact Us</a>
                   </li>
                   <li>
-                    <a href="/intern-task">Join Us</a>
+                    <a href="/single-page-webapp">Join Us</a>
                   </li>
                 </ul>
               </div>
@@ -100,7 +100,7 @@ export const Footer = () => {
       </div>
       <div className={styles.small_div}>
         <div className={styles.terms}>
-          <a href="/intern-task">Terms and Conditions</a>
+          <a href="/single-page-webapp">Terms and Conditions</a>
         </div>
         <div className={styles.logo_arrow} onClick={scrollToHeroSection}>
           <img src={logo} alt="Logo" />

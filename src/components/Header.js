@@ -68,14 +68,14 @@ const Header = ({ onSearchIconClick }) => {
             alt="logoImage"
             className={styles.cf_logo_image}
           />
-          <span className={styles.cf_logo}>Catalog</span>
+          <span className={styles.cf_logo}>CoralConnect</span>
         </div>
         <nav
           className={`${styles.cf_nav} ${
             menuOpen ? styles[`cf_nav--open`] : ""
           } ${isSmallScreen ? styles[`cf_nav--vertical`] : ""}`}
         >
-          <a className={styles.cf_nav__item} href={"/intern-task"}>
+          <a className={styles.cf_nav__item} href={"/single-page-webapp"}>
             Home
           </a>
           <a
@@ -85,7 +85,7 @@ const Header = ({ onSearchIconClick }) => {
           >
             About Us
           </a>
-          <a className={styles.cf_nav__item} href={"/intern-task"}>
+          <a className={styles.cf_nav__item} href={"/single-page-webapp"}>
             Case Studies
           </a>
           <div
