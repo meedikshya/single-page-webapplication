@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { FaArrowRight } from "react-icons/fa";
 import styles from "../styles/Hero.module.scss";
-import image from "../Images/Hero123.jpg";
+import image from "../Images/smallPicture.jpg";
 
 // Hero component definition
 const Hero = ({ showSearchBar, onCloseSearch }) => {
@@ -54,7 +54,8 @@ const Hero = ({ showSearchBar, onCloseSearch }) => {
 
         {/* Button to scroll to belowSection */}
         <button className={styles.button} onClick={handleButtonClick}>
-          Why Catalog <FaArrowRight className={styles.arrow_icon} />
+          Why CoralConnect
+          <FaArrowRight className={styles.arrow_icon} />
         </button>
       </div>
 

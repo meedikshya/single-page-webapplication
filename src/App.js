@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import "./styles/index.scss";
-// import "./styles/Header.module.scss";
-// import "./styles/variables.scss";
 import PageFirst from "./components/PageFirst";
 import { PageSecond } from "./components/PageSecond";
 import NewsSection from "./components/NewsSection";
@@ -35,7 +33,7 @@ function App() {
           return response.json();
         })
         .then((data) => {
-          setNewsArticles(data.news); // Accessing the news property of the fetched data
+          setNewsArticles(data.news); // Accessing the news property of fetched data
           setLoading(false);
         })
         .catch((error) => {
