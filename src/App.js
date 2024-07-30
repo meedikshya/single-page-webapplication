@@ -33,7 +33,7 @@ function App() {
           return response.json();
         })
         .then((data) => {
-          setNewsArticles(data.news); // Accessing the news property of fetched Data
+          setNewsArticles(data.news); // Accessing the news property of fetched data
           setLoading(false);
         })
         .catch((error) => {
